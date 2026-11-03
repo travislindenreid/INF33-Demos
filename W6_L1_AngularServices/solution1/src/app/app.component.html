@@ -1,0 +1,17 @@
+<div style="text-align:center">
+  <h1>
+    Dice rolling Simulator
+  </h1>
+</div>
+<h2>Push the button to roll the dice:</h2>
+<p>
+  <button (click)="rollDice()">Roll dice</button>
+</p>
+<p>
+  <app-die [value]="die1"></app-die>
+  <app-die [value]="die2"></app-die>
+</p>
+
+@if(die1 !=0 && die2 != 0) {
+  <p>Your rolled a total of: {{die1 + die2}}.</p>
+}
