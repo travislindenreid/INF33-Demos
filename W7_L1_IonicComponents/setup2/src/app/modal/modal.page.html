@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Checked out!</ion-title>
+    <!--TODO: add dismiss button in an <ion-buttons> and bind it to dismiss() function-->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Shopping Report</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      @for(item of itemsPurchased; track item) {
+        <ion-item>
+          <ion-icon name="cart-outline"></ion-icon>
+          <ion-label>{{item}}</ion-label>
+        </ion-item>
+      }
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      My Shopping List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    @for(item of shoppingList; track item) {
+      <ion-item>
+        <ion-checkbox slot="start" [checked]="item.inCart">{{item.item}}</ion-checkbox>
+      </ion-item>
+    }
+  </ion-list>
+  <ion-button (click)="addItem()">Add Item</ion-button>
+  <ion-button (click)="deleteItems()">Delete Item(s)</ion-button>
+  <ion-button (click)="checkOut()">Check Out</ion-button>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "modalExamples",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      My Shopping List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    @for(item of shoppingList; track item) {
+      <ion-item>
+        <ion-label>
+          <ion-checkbox [(ngModel)]="item.inCart">{{item.item}}</ion-checkbox>
+        </ion-label>
+      </ion-item>
+    }
+  </ion-list>
+  <ion-button (click)="checkOut()">Check Out</ion-button>
+  @if(itemsPurchased.length > 0) {
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Shopping Report</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        @for(item of itemsPurchased; track item) {
+          <ion-item>
+            <ion-icon name="cart-outline"></ion-icon>
+            <ion-label>{{item}}</ion-label>
+          </ion-item>
+        }
+      </ion-card-content>
+    </ion-card>
+  }
+</ion-content>
