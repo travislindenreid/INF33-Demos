@@ -89,6 +89,9 @@ export class HomePage {
 
     // clear ionic storage data
     this.storage.reset();
+
+    this.pickerValue = "";
+    this.decorativeText = "";
   }
 
   onIonChange(event: CustomEvent) {
